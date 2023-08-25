@@ -127,6 +127,13 @@ function onConnect(addr){
     flash(LED3,500); // BLUE
     lappyConnection = false;
   }
+  
+  setTimeout(()=>{
+    int.moveMouse(-100,-100,0,0,0,()=>{
+      int.moveMouse(50,50);
+    });
+  },1000);
+  
   // Flashes every 10 seconds to remind me a connection is active 
   // and thus burning battery life.
   interval = setInterval(onHeartbeat,HEARTBEAT_FREQ); 
